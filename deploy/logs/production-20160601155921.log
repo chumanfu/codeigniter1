@@ -1,0 +1,25 @@
+➤ Executing task [32mdeploy:prepare[39m
+↳ on [prod]
+PHP Notice:  Cannot connect to your.server.example.com:22. Error 0. php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in /Users/chrismitchell/Development/CIProjects/CIProject1/vendor/phpseclib/phpseclib/phpseclib/Net/SSH2.php on line 1011
+
+[37;41m                                                  [39;49m
+[37;41m  [RuntimeException]                              [39;49m
+[37;41m  Unable to login with the provided credentials.  [39;49m
+[37;41m                                                  [39;49m
+
+[33mException trace:[39m
+ () at [32m/Users/chrismitchell/Development/CIProjects/CIProject1/vendor/deployer/deployer/src/Server/Remote/PhpSecLib.php:99[39m
+ Deployer\Server\Remote\PhpSecLib->connect() at [32m/Users/chrismitchell/Development/CIProjects/CIProject1/vendor/deployer/deployer/recipe/common.php:105[39m
+ {closure}() at [32mn/a:n/a[39m
+ call_user_func() at [32m/Users/chrismitchell/Development/CIProjects/CIProject1/vendor/deployer/deployer/src/Task/Task.php:79[39m
+ Deployer\Task\Task->run() at [32m/Users/chrismitchell/Development/CIProjects/CIProject1/vendor/deployer/deployer/src/Executor/SeriesExecutor.php:43[39m
+ Deployer\Executor\SeriesExecutor->run() at [32m/Users/chrismitchell/Development/CIProjects/CIProject1/vendor/deployer/deployer/src/Console/TaskCommand.php:82[39m
+ Deployer\Console\TaskCommand->execute() at [32m/Users/chrismitchell/Development/CIProjects/CIProject1/vendor/symfony/console/Command/Command.php:256[39m
+ Symfony\Component\Console\Command\Command->run() at [32m/Users/chrismitchell/Development/CIProjects/CIProject1/vendor/symfony/console/Application.php:815[39m
+ Symfony\Component\Console\Application->doRunCommand() at [32m/Users/chrismitchell/Development/CIProjects/CIProject1/vendor/symfony/console/Application.php:186[39m
+ Symfony\Component\Console\Application->doRun() at [32m/Users/chrismitchell/Development/CIProjects/CIProject1/vendor/symfony/console/Application.php:117[39m
+ Symfony\Component\Console\Application->run() at [32m/Users/chrismitchell/Development/CIProjects/CIProject1/vendor/deployer/deployer/src/Deployer.php:101[39m
+ Deployer\Deployer->run() at [32m/Users/chrismitchell/Development/CIProjects/CIProject1/vendor/deployer/deployer/bin/dep:64[39m
+
+[32mdeploy [-p|--parallel][39m
+
